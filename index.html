@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Extra Spaces</title>
+</head>
+<body>
+    <h1>Remove Extra Spaces</h1>
+    <label for="inputText">Enter text with extra spaces:</label>
+    <input type="text" id="inputText">
+    <button onclick="removeExtraSpaces()">Remove Spaces</button>
+    <p><strong>Result:</strong> <span id="result"></span></p>
+
+    <script>
+        function removeExtraSpaces() {
+            // Get the user input text
+            const inputText = document.getElementById("inputText").value;
+
+            // Remove extra spaces using regular expression
+            const cleanedText = inputText.replace(/\s+/g, ' ');
+
+            // Display the cleaned text
+            document.getElementById("result").textContent = cleanedText;
+        }
+    </script>
+</body>
+</html>
